@@ -25,7 +25,7 @@ always @ ( negedge clock ) begin
 end
 
 always @ ( ir1, ir2, registers[ir1], registers[ir2], instruction ) begin
-  $display("registers being set, ir1 = %d, ir2 = %d", ir1, ir2);
+  //$display("registers being set, ir1 = %d, ir2 = %d", ir1, ir2);
   rs1 <= registers[ir1];
   rs2 <= registers[ir2];
 end

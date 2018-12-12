@@ -128,7 +128,7 @@ always @ ( inst, rs1, rs2 ) begin
       case(funct3)
         `B3_BEQ: begin
           if(rs1 == rs2) begin
-            $display("beq taken rs1 = %d, rs2 = %d", rs1, rs2);
+            //$display("beq taken rs1 = %d, rs2 = %d", rs1, rs2);
             pc_sel = 2'b11;
             op1sel = 0;
             op2sel = 0;
@@ -140,7 +140,7 @@ always @ ( inst, rs1, rs2 ) begin
         end
         `B3_BNE: begin
           if(rs1 != rs2) begin
-            $display("bne taken rs1 = %d, rs2 = %d", rs1, rs2);
+            //$display("bne taken rs1 = %d, rs2 = %d", rs1, rs2);
             pc_sel = 2'b11;
             op1sel = 0;
             op2sel = 0;
